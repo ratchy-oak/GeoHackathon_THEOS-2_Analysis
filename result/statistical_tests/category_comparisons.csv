@@ -1,0 +1,4 @@
+Variable,F_statistic,ANOVA_p,H_statistic,KW_p,Significant
+NDVI_mean,0.7865,0.5939,3.5455,0.7379,No
+EVI_mean,0.4976,0.8005,3.8577,0.6959,No
+NDWI_mean,5.1020,0.0049,15.1581,0.0191,Yes

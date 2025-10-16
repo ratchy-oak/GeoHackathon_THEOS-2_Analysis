@@ -1,0 +1,4 @@
+Variable,Shapiro_W,Shapiro_p,KS_stat,KS_p,Normal?
+NDVI_mean,0.7313,0.0001,0.2337,0.1537,No
+EVI_mean,0.6189,0.0000,0.2790,0.0525,No
+NDWI_mean,0.8159,0.0009,0.2489,0.1096,No

@@ -1,0 +1,11 @@
+Metric,Value
+Total_images,25.0
+Total_categories,7.0
+Avg_width_px,17786.92
+Avg_height_px,18722.56
+Avg_bands,3.64
+Vegetation_area_ha,883.4962750000001
+Water_area_ha,1559.7312000000002
+NDVI_mean_mean,7.0095372579909085
+EVI_mean_mean,4.133947665759959
+NDWI_mean_mean,30.244827540988673

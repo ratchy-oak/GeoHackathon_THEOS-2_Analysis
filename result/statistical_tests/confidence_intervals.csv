@@ -1,0 +1,4 @@
+Variable,Mean,CI_lower,CI_upper,CI_width
+NDVI_mean,7.0095,2.7517,11.2674,8.5157
+EVI_mean,4.1339,-4.3494,12.6173,16.9668
+NDWI_mean,30.2448,15.5239,44.9658,29.4419

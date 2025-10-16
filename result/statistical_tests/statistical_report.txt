@@ -1,0 +1,239 @@
+====================================================================================================
+THEOS-2 PROFESSIONAL STATISTICAL ANALYSIS REPORT
+====================================================================================================
+Generated: 2025-10-08 14:59:25.757629
+Total images processed: 25
+Confidence level: 95.0%
+Significance level (α): 0.05
+
+
+
+================================================================================
+5.1 DESCRIPTIVE STATISTICS
+================================================================================
+
+[A] Image Distribution by Category:
+----------------------------------------
+  RAW Data (PAN+MS)        7 images ( 28.0%)
+  Agri                     4 images ( 16.0%)
+  Coastal                  3 images ( 12.0%)
+  Miscellaneous            3 images ( 12.0%)
+  LULC                     3 images ( 12.0%)
+  Urban                    3 images ( 12.0%)
+  Disaster                 2 images (  8.0%)
+
+[B] Image Characteristics:
+----------------------------------------
+  Avg dimensions: 17787 x 18723 pixels
+  Avg band count: 3.64
+  Total pixel area: 10,135,388,782
+
+[C] Spectral Indices Summary (per-image means):
+----------------------------------------
+       NDVI_mean   EVI_mean   NDWI_mean
+count  22.000000  22.000000   22.000000
+mean    7.009537   4.133948   30.244828
+std     9.603281  19.133645   33.201981
+min     0.017012 -15.634215    1.217016
+25%     0.770101  -2.366571    3.146981
+50%     2.852592   0.066499   10.337218
+75%     9.052367   6.089848   60.057060
+max    38.410536  81.462804  101.340855
+
+================================================================================
+5.2 NORMALITY TESTS
+================================================================================
+Testing if data follows normal distribution (required for parametric tests)
+----------------------------------------
+NDVI_mean:
+  Shapiro-Wilk: W=0.7313, p=0.0001
+  K-S test: D=0.2337, p=0.1537
+  → Data is NOT normally distributed (α=0.05)
+
+EVI_mean:
+  Shapiro-Wilk: W=0.6189, p=0.0000
+  K-S test: D=0.2790, p=0.0525
+  → Data is NOT normally distributed (α=0.05)
+
+NDWI_mean:
+  Shapiro-Wilk: W=0.8159, p=0.0009
+  K-S test: D=0.2489, p=0.1096
+  → Data is NOT normally distributed (α=0.05)
+
+
+================================================================================
+5.3 OUTLIER DETECTION
+================================================================================
+Using z-score method (|z| > 3) and IQR method
+----------------------------------------
+NDVI_mean:
+  Total observations: 22
+  Z-score outliers (|z|>3): 1 (4.5%)
+  IQR outliers: 2 (9.1%)
+
+EVI_mean:
+  Total observations: 22
+  Z-score outliers (|z|>3): 1 (4.5%)
+  IQR outliers: 3 (13.6%)
+
+NDWI_mean:
+  Total observations: 22
+  Z-score outliers (|z|>3): 0 (0.0%)
+  IQR outliers: 0 (0.0%)
+
+
+================================================================================
+5.4 CORRELATION ANALYSIS
+================================================================================
+Pearson (parametric) and Spearman (non-parametric) correlations
+----------------------------------------
+
+Pearson Correlation Matrix (top correlations):
+  Green_mean <-> Red_mean: r=1.000, ρ=0.999
+  Blue_mean <-> Green_mean: r=1.000, ρ=0.995
+  Blue_mean <-> Red_mean: r=1.000, ρ=0.994
+  Blue_mean <-> NIR_mean: r=1.000, ρ=0.995
+  Green_mean <-> NIR_mean: r=1.000, ρ=0.997
+  Red_mean <-> NIR_mean: r=1.000, ρ=0.995
+  NIR_mean <-> NDWI_mean: r=-0.955, ρ=-0.957
+  Red_mean <-> NDWI_mean: r=-0.955, ρ=-0.966
+  Green_mean <-> NDWI_mean: r=-0.955, ρ=-0.967
+  Blue_mean <-> NDWI_mean: r=-0.955, ρ=-0.956
+
+================================================================================
+5.5 CATEGORY COMPARISON TESTS
+================================================================================
+Testing if different categories have significantly different values
+----------------------------------------
+
+NDVI_mean:
+----------------------------------------
+  ANOVA: F=0.7865, p=0.5939
+  Kruskal-Wallis: H=3.5455, p=0.7379
+  → No significant difference (α=0.05)
+
+EVI_mean:
+----------------------------------------
+  ANOVA: F=0.4976, p=0.8005
+  Kruskal-Wallis: H=3.8577, p=0.6959
+  → No significant difference (α=0.05)
+
+NDWI_mean:
+----------------------------------------
+  ANOVA: F=5.1020, p=0.0049
+  Kruskal-Wallis: H=15.1581, p=0.0191
+  → **SIGNIFICANT** difference between categories (α=0.05)
+
+  Pairwise comparisons (Mann-Whitney U):
+    Agri vs Coastal: U=12, p=0.0571 
+    Agri vs Disaster: U=8, p=0.1333 
+    Agri vs LULC: U=8, p=0.6286 
+    Agri vs Miscellaneous: U=8, p=0.6286 
+    Agri vs RAW Data (PAN+MS): U=4, p=0.3429 
+    Agri vs Urban: U=12, p=0.0571 
+    Coastal vs Disaster: U=2, p=0.8000 
+    Coastal vs LULC: U=1, p=0.2000 
+    Coastal vs Miscellaneous: U=0, p=0.1000 
+    Coastal vs RAW Data (PAN+MS): U=0, p=0.0571 
+    Coastal vs Urban: U=0, p=0.1000 
+    Disaster vs LULC: U=1, p=0.4000 
+    Disaster vs Miscellaneous: U=0, p=0.2000 
+    Disaster vs RAW Data (PAN+MS): U=0, p=0.1333 
+    Disaster vs Urban: U=0, p=0.2000 
+    LULC vs Miscellaneous: U=6, p=0.7000 
+    LULC vs RAW Data (PAN+MS): U=2, p=0.2286 
+    LULC vs Urban: U=6, p=0.7000 
+    Miscellaneous vs RAW Data (PAN+MS): U=0, p=0.0571 
+    Miscellaneous vs Urban: U=6, p=0.7000 
+    RAW Data (PAN+MS) vs Urban: U=12, p=0.0571 
+
+================================================================================
+5.6 REGRESSION ANALYSIS
+================================================================================
+Predicting NDVI from spectral bands
+----------------------------------------
+
+Linear Regression: NDVI ~ Red + NIR
+  R² = 0.6418
+  RMSE = 5.6151
+  MAE = 3.4752
+  Coefficients:
+    Red_mean: 0.076260
+    NIR_mean: -0.076787
+  Intercept: 35.234323
+
+Residual Analysis:
+  Mean residual: 0.000000 (should be ~0)
+  Std residual: 5.747207
+
+================================================================================
+5.7 PRINCIPAL COMPONENT ANALYSIS (PCA)
+================================================================================
+Dimensionality reduction of spectral bands
+----------------------------------------
+
+PCA Results (n_components=4):
+Component       Var Explained   Cumulative     
+---------------------------------------------
+PC1                    100.00%         100.00%
+PC2                      0.00%         100.00%
+PC3                      0.00%         100.00%
+PC4                      0.00%         100.00%
+
+Component Loadings:
+            PC1       PC2       PC3       PC4
+Blue_mean   0.5 -0.254605  0.795349 -0.229339
+Green_mean  0.5 -0.287676 -0.176440  0.797566
+Red_mean    0.5 -0.322738 -0.578494 -0.557839
+NIR_mean    0.5  0.865020 -0.040415 -0.010388
+
+================================================================================
+5.8 CONFIDENCE INTERVALS
+================================================================================
+Computing 95.0% confidence intervals for means
+----------------------------------------
+NDVI_mean:
+  Mean = 7.0095
+  95.0% CI: [2.7517, 11.2674]
+  CI width: 8.5157
+
+EVI_mean:
+  Mean = 4.1339
+  95.0% CI: [-4.3494, 12.6173]
+  CI width: 16.9668
+
+NDWI_mean:
+  Mean = 30.2448
+  95.0% CI: [15.5239, 44.9658]
+  CI width: 29.4419
+
+
+================================================================================
+5.9 AREA ESTIMATION SUMMARY
+================================================================================
+Thresholds: NDVI ≥ 0.3, NDWI ≥ 0.2
+----------------------------------------
+
+Total estimated vegetation area: 883.50 ha
+Total estimated water area: 1,559.73 ha
+
+Top 5 images by vegetation area:
+  RAW Data (PAN+MS): 618.50 ha - RAW Data (PAN+MS)/Area02_ร้อยเอ็ด/L3ORT_P+MS/IMG_T2V_ORTHO_MS_32/IMG_T2V_20240115032611_ORTHO_MS_32.TIF
+  Agri: 66.45 ha - Agri/IMG_T2V_20241012033956_ORTHO_PMS_32_2.tif
+  LULC: 52.82 ha - LULC/IMG_T2V_20241012033956_ORTHO_PMS_32.tif
+  Agri: 44.62 ha - Agri/IMG_T2V_20241012033956_ORTHO_PMS_32.tif
+  LULC: 26.94 ha - LULC/IMG_T2V_20241224034201_ORTHO_PMS_32.tif
+
+Top 5 images by water area:
+  RAW Data (PAN+MS): 1160.32 ha - RAW Data (PAN+MS)/Area02_ร้อยเอ็ด/L3ORT_P+MS/IMG_T2V_ORTHO_MS_32/IMG_T2V_20240115032611_ORTHO_MS_32.TIF
+  Agri: 86.21 ha - Agri/IMG_T2V_20241012033956_ORTHO_PMS_32_2.tif
+  Agri: 76.84 ha - Agri/IMG_T2V_20241012033956_ORTHO_PMS_32.tif
+  LULC: 73.66 ha - LULC/IMG_T2V_20241012033956_ORTHO_PMS_32.tif
+  LULC: 36.71 ha - LULC/IMG_T2V_20241224034201_ORTHO_PMS_32.tif
+
+================================================================================
+GENERATING SUMMARY VISUALIZATIONS
+================================================================================
+
+✅ All statistical analyses complete!
+✅ Report saved to: /content/theos2_professional_outputs/statistical_tests/statistical_report.txt
